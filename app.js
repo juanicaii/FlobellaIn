@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
-app.use(express.static("./front/build/"));
+app.use(express.static("./build/"));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
