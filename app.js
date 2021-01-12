@@ -21,7 +21,7 @@ app.use(function (req, res, next) {
   );
   next();
 });
-app.use(express.static("./front/build/"));
+app.use(express.static("./dist/build/"));
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,7 +29,7 @@ app.use(cookieParser());
 
 app.use("/", mainRoutes);
 app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/front/build/index.html");
+  res.sendFile(__dirname + "/dist/build/index.html");
 });
 app.listen(3200);
 module.exports = app;
