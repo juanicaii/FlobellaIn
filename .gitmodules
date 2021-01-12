@@ -1,3 +1,6 @@
 [submodule "dist"]
 	path = dist
 	url = https://github.com/juanicaii/FlobellaFront
+[submodule "front"]
+	path = front
+	url = https://github.com/juanicaii/FlobellaFront
