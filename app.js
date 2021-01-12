@@ -29,7 +29,7 @@ app.use(cookieParser());
 
 app.use("/", mainRoutes);
 app.get("*", (req, res) => {
-  res.sendFile(__dirname + "/dist/build/index.html");
+  const index = path.join(__dirname, "dist/build", "index.html");
 });
 app.listen(3200);
 module.exports = app;
